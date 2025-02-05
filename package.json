@@ -1,0 +1,34 @@
+{
+  "name": "bn_jobmatch",
+  "version": "1.0.0",
+  "description": "Bright Network job matching tech test",
+  "homepage": "https://github.com/duncanmcdougall/bn_jobmatch#readme",
+  "bugs": {
+    "url": "https://github.com/duncanmcdougall/bn_jobmatch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncanmcdougall/bn_jobmatch.git"
+  },
+  "license": "ISC",
+  "author": "Duncan McDougall",
+  "main": "./src/matcher.ts",
+  "scripts": {
+    "importer": "tsx ./src/importer.ts",
+    "matcher": "tsx ./src/matcher.ts",
+    "postinstall": "prisma generate",
+    "migrate:dev": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.3.2",
+    "@prisma/client": "^6.3.1",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "pgvector": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "prisma": "^6.3.1",
+    "tsx": "^4.19.2"
+  }
+}
